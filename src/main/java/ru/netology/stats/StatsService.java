@@ -3,7 +3,7 @@ package ru.netology.stats;
 public class StatsService {
     public static void main(String[] args) {
         // Инициализация массива с данными
-        int[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         // Массив с названиями месяцев
         String[] monthNames = {"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
@@ -24,16 +24,16 @@ public class StatsService {
     }
 
     // Сумма всех продаж
-    public int totalSales(int[] sales) {
+    public int totalSales(long[] sales) {
         int sum = 0;
-        for (int sale : sales) {
+        for (long sale : sales) {
             sum += sale;
         }
         return sum;
     }
 
     // Средняя сумма продаж в месяц
-    public double averageSales(int[] sales) {
+    public double averageSales(long[] sales) {
         if (sales.length == 0) {
             return 0;
         }
@@ -41,7 +41,7 @@ public class StatsService {
     }
 
     // Номер месяца с минимальными продажами
-    public int minSales(int[] sales) {
+    public int minSales(long[] sales) {
         int minMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
 
         for (int i = 0; i < sales.length; i++) {
@@ -54,7 +54,7 @@ public class StatsService {
     }
 
     // Номер месяца с максимальными продажами
-    public int maxSales(int[] sales) {
+    public int maxSales(long[] sales) {
         int maxMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -67,11 +67,11 @@ public class StatsService {
     }
 
     // Количество месяцев с продажами ниже среднего
-    public int monthsBelowAverage(int[] sales) {
+    public int monthsBelowAverage(long[] sales) {
         double average = averageSales(sales);
         int count = 0;
 
-        for (int sale : sales) {
+        for (long sale : sales) {
             if (sale < average) {
                 count++;
             }
@@ -81,11 +81,11 @@ public class StatsService {
     }
 
     // Количество месяцев с продажами выше среднего
-    public int monthsAboveAverage(int[] sales) {
+    public int monthsAboveAverage(long[] sales) {
         double average = averageSales(sales);
         int count = 0;
 
-        for (int sale : sales) {
+        for (long sale : sales) {
             if (sale > average) {
                 count++;
             }

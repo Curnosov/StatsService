@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
 
-    private final int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    private final long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
     @Test
         // Сумма всех продаж
@@ -75,7 +75,7 @@ class StatsServiceTest {
     }
 }
 
-//  -------------------------------------------------------
+// [INFO] -------------------------------------------------------
 //[INFO]  T E S T S
 //[INFO] -------------------------------------------------------
 //[INFO] Running ru.netology.stats.StatsServiceTest
