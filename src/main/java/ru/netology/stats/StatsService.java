@@ -24,8 +24,8 @@ public class StatsService {
     }
 
     // Сумма всех продаж
-    public int totalSales(long[] sales) {
-        int sum = 0;
+    public long totalSales(long[] sales) {
+        long sum = 0;
         for (long sale : sales) {
             sum += sale;
         }

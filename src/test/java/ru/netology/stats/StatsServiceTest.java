@@ -12,9 +12,9 @@ class StatsServiceTest {
         // Сумма всех продаж
     void shouldCalculateTotalSales() {
         StatsService service = new StatsService();
-        int expected = 180;
+        long expected = 180;
 
-        int actual = service.totalSales(sales);
+        long actual = service.totalSales(sales);
 
         assertEquals(expected, actual);
     }
